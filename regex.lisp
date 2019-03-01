@@ -4,7 +4,7 @@
   (cl-ppcre:scan "(?i)(y|ye|yes)" string))
 
 (defun is-variable? (string)
-  (cl-ppcre:scan "^[A-z][A-z0-9]*$" string))
+  (cl-ppcre:scan "^[A-Za-z][A-Za-z0-9]*$" string))
 
 (defun is-number? (string)
   (cl-ppcre:scan "^([\+\-])?[0-9]+(.[0-9]+)?((e|E)([\+\-])?[0-9]+)?$" string))
