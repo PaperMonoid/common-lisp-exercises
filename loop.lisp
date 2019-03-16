@@ -4,4 +4,7 @@
       for y = (* x 2)
       collect y)
 
+(loop for (a b) in '((x 1) (y 2) (z 3))
+      collect (list b a) )
+
 (loop repeat 10 do (format t "ok"))
