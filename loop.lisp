@@ -8,7 +8,8 @@
 (loop for (a b) in '((x 1) (y 2) (z 3))
       collect (list b a) )
 
-(loop repeat 10 do (format t "ok"))
+(loop repeat 10
+      do (format t "ok"))
 
 (dolist (item '(ichi ni san))
   (print item))
