@@ -1,8 +1,8 @@
-(defun factorize (n &optional (i 2) (limit n))
-  (if (< i limit)
-      (if (zerop (mod n i))
-	  i
-	  (factorize n (+ i 1) (floor (/ n i))))
-      n))
+(defun factorize (n)
+  (let ((limit n))
+    (loop for i from 2 to limit
+       do (if (zerop (mod n i))
+	      (return i)
+	      (setq limit (floor (/ n i)))))))
 
 (factorize (* 15485863 32452843))
