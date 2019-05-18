@@ -4,3 +4,6 @@
    (height :reader get-height :writer set-height)))
 
 (make-instance 'Box)
+
+(defclass Point ()
+  (x y z))
